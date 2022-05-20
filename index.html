@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SKPK FOOD</title>
+    </head>
+    <body>
+        <div id="produk">
+
+        </div>
+        <script src="database.js"></script>
+
+        <script type="text/javascript">
+        
+        let hasil = "";
+            for (index in makanan) {
+                hasil += "<img src='"+makanan[index].gambar+"'><br>";
+                hasil += "<h1>"+makanan[index].nama+"</h1><br>";
+                hasil += "<h2>"+makanan[index].harga+"</h2><br>";
+                hasil += "<button onclick='myalert()'>Tambahkan ke keranjang</button><br><br>";
+
+                function myalert() {
+                    alert("Ditambahkan ke Keranjang");
+                }
+            }
+            document.getElementById("produk").innerHTML = hasil;
+            
+        </script>
+    </body>
+</html>
